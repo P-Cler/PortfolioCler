@@ -1,0 +1,1536 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-20: #ffb900;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+  }
+
+.C-Container {
+  display: flex;
+  align-items: center;
+}
+
+/* Ajuste o posicionamento do ícone de idioma */
+#traduz {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+#traduz .rodape-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+#traduz .rodape-link i {
+    font-size: 1.25rem;
+}
+
+.icon.idioma {
+    background: black;
+    --color: black;
+}
+
+.icone {
+  display: inline-flex;
+  list-style: none;
+}
+
+.icone .icon {
+  position: relative;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown {
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+
+.dropdown.open {
+    display: block;
+}
+
+.dropdown a{
+  text-decoration: none;
+  color: #0e0c0c;
+  margin-left: 10px;
+}
+
+.dropdown a:hover{
+  text-decoration: none;
+  color: rgb(0, 119, 255);
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .switch:hover */.sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 15px 10px;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+  }
+
+  .cabecalho::after{
+    background-color: #f7f2f2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.referencias {
+    display: flex;
+      justify-content: flex-end; 
+      align-items: center;
+      margin-right: 17px;
+    width: auto;
+    height: auto;
+    margin-left: 20px;
+}
+
+.referencias nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.referencias nav a {
+    color: rgb(0, 0, 0);
+    margin: 6px;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 22px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.referencias nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 50%;
+    background-color: rgb(0, 119, 255);
+    transition: width 0.3s ease, left 0.2s ease;
+}
+.referencias nav a.pagina-atual::after,
+.referencias nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.referencias nav a:hover {
+    pointer-events: auto;
+}
+
+.referencias nav a.pagina-atual:hover {
+    pointer-events: none;
+}
+
+.referencias nav a:hover {
+    color: rgb(0, 119, 255);
+}
+
+nav .pagina-atual {
+    color: rgb(0, 119, 255) !important;
+}
+
+
+.botaoquemsomos button {
+  background-color: #fff;
+  border: 3px solid rgb(0, 119, 255);
+  border-radius: 50px;
+  padding: 7px 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.4s ease;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botaoquemsomos button a {
+  text-decoration: none;
+  font-family: Verdana;
+  color: rgb(0, 119, 255);
+  font-size: 13px;
+  flex: 1;
+  /* Faz o link ocupar todo o espaço disponível no botão */
+  text-align: center;
+  /* Centraliza horizontalmente o texto do link */
+}
+
+.botaoquemsomos button:hover {
+  background-color: rgb(0, 119, 255);
+}
+
+.botaoquemsomos button:hover span {
+  color: #fff;
+}
+
+
+.começo {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens no topo verticalmente */
+}
+
+.texto{
+  margin-left: 20px;
+  max-width: 30%;
+  top: 0;
+}
+
+:root {
+  --white: #FFF;
+  --primary: #645DFF;
+  --secondary: #2A2649;
+  --secondary-light: #777777;
+  --body-background: #efeefa;
+  --border: #E6E8F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tabs-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;	
+}
+
+.tab-content {
+  display: block;
+  font-size: 1rem;
+  padding: 24px 8px;
+  width: 100%;
+  height: 540px;
+  transition: all 0.45s ease-in-out;
+  overflow: auto; /* Adiciona a propriedade overflow para habilitar a barra de rolagem quando necessário */
+}
+
+/* Adiciona a propriedade max-height para controlar a altura máxima do conteúdo da tab */
+.tab-content-wrapper {
+  overflow-y: hidden;
+  overflow-x: auto;
+  max-height: 540px;
+  color: var(--secondary);
+  transition: all 0.45s ease-in-out;
+  padding: 12px 24px;
+}
+
+.tab-content h2 {
+  color: var(--secondary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.tab-content {
+  display: block;
+  font-size: 1rem;
+  padding: 24px 8px;
+  width: 100%;
+  height: 540px;
+  transition: all 0.45s ease-in-out;
+}
+
+.tab-content img {
+  max-width: 300px;
+  width: 80%;
+  flex-grow: 1;
+}
+
+.tabs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.tabs a {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  width: 50%;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-light);
+  overflow: hidden;
+  text-align: left;
+  justify-content: start;
+  height: 90px;
+  padding: 10px;
+  width: 350px;
+  align-items: center;
+  gap: 6px;
+}
+
+.tabs a#tab4 {
+  gap: 4px; /* Aumente ou diminua esse valor para ajustar o espaçamento */
+}
+
+.tabs a img {
+  height: 20px;
+  width: 20px;
+}
+
+.tabs .active, .tabs a:hover {
+  font-weight: 700;
+  outline: none;
+  color: var(--primary);
+  border-right: 3px solid var(--primary);
+  border-bottom: 0px  var(--primary);
+}
+
+
+.tabs a svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--secondary-light);
+}
+
+.tabs .active svg, .tabs a:hover svg {
+  stroke: var(--primary);
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.Card-Container {
+  width: 100%;
+  width: 1100px;
+  height: 400px;
+  display: flex;
+  gap: 10px;
+  margin-inline: 50px;
+  max-width: 100%;
+}
+
+.card {
+  min-width: 70px;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  --transition-timing: 0.25s;
+}
+.card.active {
+  flex-grow: 100;
+}
+
+.card > .background {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: left;
+  filter: brightness(0.8);
+  z-index: -1;
+  transition: var(--transition-timing) ease;
+}
+.card.active > .background {
+  filter: brightness(1) grayscale(0);
+}
+
+.card > .card-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 20px;
+  overflow: hidden;
+  transition: var(--transition-timing);
+  z-index: 10;
+}
+.card.active > .card-content {
+  inset: 20px;
+  top: auto;
+}
+
+.card-content * {
+  transition: var(--transition-timing);
+}
+
+.card-content > .profile-image {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.226);
+}
+.card.active .profile-image {
+  border: 1px solid rgb(110, 252, 205);
+}
+.profile-image > svg {
+  stroke: #fefefe;
+}
+.card.active .profile-image > svg {
+  stroke: rgb(110, 252, 205);
+}
+
+.card-content > .title {
+  white-space: pre;
+  margin-left: 10px;
+  translate: 0 100%;
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+.card.active .title {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.title{
+  color: white;
+}
+
+.card > .backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+.info{
+  display: none;
+  position: absolute;
+  right: 0; /* Ajuste para a distância da direita */
+  color: white; /* Cor de fundo para a classe .info */
+  padding: 10px; /* Espaçamento interno */
+  z-index: 1;
+  max-width: 220px; /* Defina o limite de largura para o texto */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card.active:hover .info{
+  display: block;
+}
+
+
+
+.card.active:hover{
+background: linear-gradient(
+  to bottom,
+  rgba(0,0,0,0),
+  rgba(0,0,0,0.7)
+)
+}
+
+
+
+
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -35px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before {
+  background: var(--color);
+  color: white;
+}
+
+#rodapeambiente {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  width: 100%;
+  color: var(--color-neutral-40);
+}
+
+#rodape_conteudo {
+  background-color: #202020;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 0.1%; 
+  padding: 3rem 3.5rem;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.esquerda {
+  display: flex;
+  justify-content: flex-start;
+  grid-column: 1 / span 1; 
+}
+
+#rodape_contatos h2 {
+  margin-bottom: 0.75rem;
+}
+
+.esquerda h2{
+  margin-top: -2000px;
+}
+
+#rodape_socialmedia {
+  display: inline-block;
+  margin-right: 10px;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-top: 33px;
+}
+
+#rodape_socialmedia .rodape-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color-neutral-40);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+#rodape_socialmedia .rodape-link i {
+  font-size: 1.25rem;
+}
+
+.rodape-link {
+  text-decoration: none;
+}
+
+.nome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  height: 100%;
+}
+
+.direita {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#rodape_contatosdireita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#rodape_contatos h2,
+#rodape_contatosdireita h2 {
+  margin: 0; 
+  position: relative;
+}
+
+.centralizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  height: 100%; 
+}
+
+#rodape_copyright {
+  display: flex;
+  justify-content: center;
+  background-color: #151515;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+}
+
+.rodape-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.rodape-lista .rodape-link {
+  color: var(--color-neutral-30);
+  transition: all 0.3s;
+}
+
+.rodape-lista .rodape-link:hover {
+  color: var(--color-neutral-20);
+}
+.rodape-link {
+  text-decoration: none;
+}
+
+/* Cores */
+
+.instagram, 
+#instagram{
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+.instagram .tooltip{
+  --color: #e4405f;
+}
+
+.gmail {
+  --color: #db4a39;
+  background-color: #db4a39;
+}
+
+.gmail .tooltip{
+  --color: #db4a39;
+}
+
+.Whatsapp{
+  --color: #25D366;
+  background-color: #25D366;
+}
+
+.Whatsapp .tooltip{
+  --color: #25D366;
+}
+
+.Linkedin{
+  --color: #4267b3;
+  background-color: #4267b3;
+}
+
+.Linkedin .tooltip{
+  --color: #4267b3;
+}
+
+.Lattes{
+  --color: #548cc7;
+  background-color: #548cc7;
+}
+
+.Lattes .tooltip{
+  --color: #548cc7;
+}
+
+.icon.Lattes {
+  background: var(--color ); 
+}
+
+.Github .tooltip{
+  --color: black;
+  background-color: black;
+}
+
+.Github,
+#github{
+  background-color: black;
+}
+
+/* Cores */
+
+/* Responsividade */
+
+@media only screen and (max-width: 765px) {
+
+  .tab-content {
+    display: none;
+  }
+
+ 
+  .tab-content-wrapper {
+    overflow-y: hidden;
+    max-height: none;
+    color: var(--secondary);
+    transition: all 0.45s ease-in-out;
+    padding: 12px 24px;
+    width: 100%;
+  }
+
+  .tabs-container {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+  }
+
+  .tabs {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .tabs a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-light);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: auto;
+    flex: 100 100 100%;
+    width: 100%;
+  }
+
+  .tabs a img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .tabs .active, .tabs a:hover {
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    border-right: 0px  var(--primary);
+  }
+
+  .tabs a svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .tabs .active svg, .tabs a:hover svg {
+    stroke: var(--primary);
+  }
+}
+
+@media screen and (min-width:749px) and (max-width: 971px) {
+  .Card-Container {
+    display: block;
+    margin-bottom: 400px;
+  }
+
+  .card {
+    width: calc(100% - 20px); /* Reduzindo o tamanho e considerando a margem entre os elementos */
+    max-width: 550px; /* Defina um tamanho máximo para os itens */
+    margin: 10px auto; /* Centralizando os itens */
+    border-radius: 15px; /* Ajustando o raio dos cantos */
+    height: 100px;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+    cursor: pointer;
+    transform-origin: top left; /* Define o ponto de origem da transformação */
+    margin-left: 0;
+  }
+  
+  .card.active {
+    max-width: 600px; /* Defina um tamanho máximo para os itens */
+    width: 3000px; /* Ajuste a largura conforme desejado */
+    height: 200px; /* Ajuste a altura conforme desejado */
+    transform: scale(1.1); /* Escala o card e seu conteúdo */
+    margin-bottom: 40px;
+  }
+
+  .card.active img {
+    width: 100%; /* Garante que a imagem ocupe todo o espaço */
+    height: 100%; /* Garante que a imagem ocupe todo o espaço */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
+  }
+
+  .card .info {
+    color: black;
+    align-self: flex-end; /* Ajusta o alinhamento para a parte inferior por padrão */
+  }
+  
+  .card.active .info {
+    align-self: flex-start; /* Reposiciona a informação para o topo quando ativo */
+    margin-top: 20px;
+    margin-left: 200px;
+  }
+
+   .card.active .especial .info{
+    color: white;
+    left: 0;
+    margin-left: -1px;
+  }
+
+  .especial0 .card.active .info{
+    color: white;
+    left: 0;
+    margin-left: -1px;
+    margin-top: -10px;
+  }
+
+  .especial .card.active .title{
+    margin-bottom: -10px;
+  }
+
+  .card > .background {
+    width: 100%;
+    height: 100px; /* Defina a altura desejada */
+    object-fit: cover;
+  }
+
+  .card.active > .background {
+    filter: brightness(1) grayscale(0);
+  }
+
+  .card > .card-content {
+    display: none;
+    padding: 10px; /* Adicionando um espaçamento interno */
+  }
+
+  .card.active > .card-content {
+    display: block;
+  }
+
+  .card-content > .title {
+    margin-bottom: 5px; /* Ajustando o espaçamento entre o título e o conteúdo */
+  }
+
+  .info {
+    display: none;
+  }
+
+  .card.active:hover {
+    background: none;
+  }
+
+  .PBinfo {
+    max-width: 70px;
+    margin-left: -220px;
+    margin-top: -15px;
+    line-height: 1.5;
+  }
+
+  .PBinfo a{
+    color: rgb(255, 255, 255);
+    width: 180px;
+    margin-left: -310px;
+    margin-top: -15px;
+    display: block;
+  }
+
+  .Graninfo{
+    margin-left: -220px;
+    margin-top: -15px;
+    line-height: 1.5;
+  }
+
+  .Graninfo a{
+    color: rgb(255, 255, 255);
+    width: 180px;
+    margin-left: -350px;
+    margin-top: -15px;
+    display: block;
+  }
+
+  .Reninfo{
+    margin-left: -220px;
+    margin-top: -20px;
+    line-height: 1.5;
+  }
+
+  .Reninfo a{
+    margin-left: -120px;
+    margin-top: -14px;
+    display: block;
+  }
+
+}
+
+
+
+@media screen and (min-width:601px) and (max-width: 748px) {
+  .Card-Container {
+    display: block;
+    margin-bottom: 400px;
+  }
+
+  .card {
+    width: calc(100% - 20px); /* Reduzindo o tamanho e considerando a margem entre os elementos */
+    max-width: 450px; /* Defina um tamanho máximo para os itens */
+    margin: 10px auto; /* Centralizando os itens */
+    border-radius: 15px; /* Ajustando o raio dos cantos */
+    height: 100px;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+    cursor: pointer;
+    transform-origin: top left; /* Define o ponto de origem da transformação */
+    margin-left: 0;
+  }
+  
+  .card.active {
+    max-width: 500px; /* Defina um tamanho máximo para os itens */
+    width: 3000px; /* Ajuste a largura conforme desejado */
+    height: 200px; /* Ajuste a altura conforme desejado */
+    transform: scale(1.1); /* Escala o card e seu conteúdo */
+    margin-bottom: 40px;
+  }
+
+  .card.active img {
+    width: 100%; /* Garante que a imagem ocupe todo o espaço */
+    height: 100%; /* Garante que a imagem ocupe todo o espaço */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
+  }
+
+  .card .info {
+    color: black;
+    align-self: flex-end; /* Ajusta o alinhamento para a parte inferior por padrão */
+  }
+  
+  .card.active .info {
+    align-self: flex-start; /* Reposiciona a informação para o topo quando ativo */
+    margin-top: 20px;
+    margin-left: 200px;
+  }
+
+   .card.active .especial .info{
+    color: white;
+    left: 0;
+    margin-left: -1px;
+  }
+
+  .especial0 .card.active .info{
+    color: white;
+    left: 0;
+    margin-left: -1px;
+    margin-top: -10px;
+  }
+
+  .especial .card.active .title{
+    margin-bottom: -10px;
+  }
+
+  .card > .background {
+    width: 100%;
+    height: 100px; /* Defina a altura desejada */
+    object-fit: cover;
+  }
+
+  .card.active > .background {
+    filter: brightness(1) grayscale(0);
+  }
+
+  .card > .card-content {
+    display: none;
+    padding: 10px; /* Adicionando um espaçamento interno */
+  }
+
+  .card.active > .card-content {
+    display: block;
+  }
+
+  .card-content > .title {
+    margin-bottom: 5px; /* Ajustando o espaçamento entre o título e o conteúdo */
+  }
+
+  .info {
+    display: none;
+  }
+
+  .card.active:hover {
+    background: none;
+  }
+
+  .PBinfo {
+    max-width: 70px;
+    margin-left: -220px;
+    margin-top: -15px;
+    line-height: 1.5;
+  }
+
+  .PBinfo a{
+    color: rgb(255, 255, 255);
+    width: 180px;
+    margin-left: -220px;
+    margin-top: -15px;
+    display: block;
+  }
+
+  .Graninfo{
+    margin-left: -220px;
+    margin-top: -15px;
+    line-height: 1.5;
+  }
+
+  .Graninfo a{
+    color: rgb(255, 255, 255);
+    width: 180px;
+    margin-left: -250px;
+    margin-top: -25px;
+    display: block;
+  }
+
+  .Reninfo{
+    margin-left: -220px;
+    margin-top: -15px;
+    line-height: 1.5;
+  }
+
+  .Reninfo a{
+    margin-left: -120px;
+    display: block;
+  }
+
+}
+
+
+
+@media screen and (max-width:600px) {
+
+  .card {
+    width: calc(100% - 20px); /* Reduzindo o tamanho e considerando a margem entre os elementos */
+    max-width: 350px; /* Defina um tamanho máximo para os itens */
+    border-radius: 15px; /* Ajustando o raio dos cantos */
+    height: 100px;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+    cursor: pointer;
+    transform-origin: top left; /* Define o ponto de origem da transformação */
+    margin-left: 0;
+  }
+
+  .Card-Container {
+    display: block;
+    margin-bottom: 400px;
+  }
+  
+  .card.active {
+    max-width: 300px; /* Defina um tamanho máximo para os itens */
+    width: 3000px; /* Ajuste a largura conforme desejado */
+    height: 200px; /* Ajuste a altura conforme desejado */
+    transform: scale(1.1); /* Escala o card e seu conteúdo */
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .card.active img {
+    width: 100%; /* Garante que a imagem ocupe todo o espaço */
+    height: 100%; /* Garante que a imagem ocupe todo o espaço */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
+  }
+
+  .card .info {
+    color: black;
+    align-self: flex-end; /* Ajusta o alinhamento para a parte inferior por padrão */
+  }
+  
+  .card.active .info {
+    align-self: flex-start; /* Reposiciona a informação para o topo quando ativo */
+    margin-top: 20px;
+    margin-left: 200px;
+  }
+
+   .card.active .especial .info{
+    color: white;
+    left: 0;
+    margin-left: -1px;
+  }
+
+  .especial0 .card.active .info{
+    color: white;
+    left: 0;
+    margin-left: -1px;
+    margin-top: -10px;
+  }
+
+  .especial .card.active .title{
+    margin-bottom: -10px;
+  }
+
+  .card > .background {
+    width: 100%;
+    height: 100px; /* Defina a altura desejada */
+    object-fit: cover;
+  }
+
+  .card.active > .background {
+    filter: brightness(1) grayscale(0);
+  }
+
+  .card > .card-content {
+    display: none;
+    padding: 10px; /* Adicionando um espaçamento interno */
+  }
+
+  .card.active > .card-content {
+    display: block;
+  }
+
+  .card-content > .title {
+    margin-bottom: 5px; /* Ajustando o espaçamento entre o título e o conteúdo */
+  }
+
+  .info {
+    display: none;
+  }
+
+  .card.active:hover {
+    background: none;
+  }
+
+  .Reninfo{
+    margin-left: -220px;
+    margin-top: -20px;
+    line-height: 1.5;
+  }
+
+  .Reninfo a{
+    margin-left: -20px;
+    margin-top: -14px;
+    display: block;
+  }
+  
+}
+
+.ambieinfo{
+  color: white;
+  width: 250px;
+  margin-left: -30px;
+}
+
+.Graninfo{
+  color: white;
+  width: 250px;
+  margin-left: -30px;
+  margin-top: -20px;
+}
+
+.Quizinfo{
+  width: 250px;
+  margin-left: -13px;
+}
+
+.Reninfo{
+  width: 250px;
+  margin-left: -25px;
+  margin-top: -5px;
+}
+
+.Inninfo{
+  width: 250px;
+  margin-left: -7px;
+  margin-top: 25px;
+}
+
+.PBinfo{
+  color: white;
+  width: 180px;
+  margin-left: -270px;
+  margin-top: -15px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .cabecalho {
+    flex-direction: column; /* Alinhar os elementos verticalmente */
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .referencias nav {
+    margin: 10px; /* Adicionar um espaço entre os itens */
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .começo {
+    flex-direction: column; /* Empilhar os itens verticalmente */
+    align-items: center; /* Centralizar os itens na horizontal */
+    overflow: hidden;
+  }
+
+  .texto {
+    max-width: 90%; /* Reduzir um pouco a largura para melhor legibilidade */
+    margin-left: 0; /* Remover a margem na esquerda para centralizar */
+    margin-top: 20px; /* Adicionar espaço entre os elementos */
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .começo {
+    flex-direction: column; /* Empilhar os itens verticalmente */
+    align-items: center; /* Centralizar os itens na horizontal */
+  }
+
+  .texto {
+    max-width: 90%; /* Reduzir um pouco a largura para melhor legibilidade */
+    margin-left: 0; /* Remover a margem na esquerda para centralizar */
+    margin-top: 20px; /* Adicionar espaço entre os elementos */
+  }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #rodape_conteudo {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      width: 100%;
+      overflow: hidden;
+  }
+
+  #rodapeambiente{
+    width: 100%;
+  }
+  .centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin-bottom: -120px;
+  }
+  .direita,
+  .esquerda {
+    justify-content: center; 
+  }
+}
+
+@media screen and (min-width: 226px) and (max-width: 767px) {
+  #rodape_conteudo {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+      width: 100%;
+      overflow: hidden;
+  }
+  .centralizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+
+  }
+  .esquerda,
+  .direita,
+  #rodape_contatos,
+  #rodape_contatosdireita {
+    justify-content: center; 
+  }
+  .esquerda, .centro{
+    margin-bottom: 20px;
+  }
+
+}
+
+/* Responsividade */
+
+
+/* Dark-Mode */
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .cabecalho{
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .referencias a{
+  color: #ffffff;
+}
+
+.dark-mode .tabs-container{
+  background-color: #323131;
+  color: #ffffff;
+}
+
+.dark-mode .tab-content-wrapper{
+
+  color: #ffffff;
+}
+
+.dark-mode .tab-content h2{
+  color: #ffffff;
+}
+
+.dark-mode .tabs a{
+  color: #ffffff;
+}
+
+.dark-mode .botaoquemsomos button {
+  background-color: #333; /* Altere para a cor desejada no modo escuro */
+  border-color: #fff; /* Altere a cor da borda se necessário */
+}
+
+.dark-mode .botaoquemsomos button a {
+  color: #fff; /* Altere a cor do texto do link no modo escuro */
+}
+
+.botaoquemsomos button:hover {
+  background-color: rgb(0, 119, 255);
+}
+
+.botaoquemsomos button:hover span {
+  color: #fff;
+}
+
+.dark-mode .dropdown a{
+  color: white;
+}
+
+.dark-mode .dropdown a:hover{
+  text-decoration: none;
+  color: rgb(0, 119, 255);
+}
+
+/* Dark-Mode */

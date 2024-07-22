@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/projetos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" type='text/css'>
+</head>
+<body>
+
+    <div class="cabecalho">
+        <div class="C-Container">
+            <label class="switch" for="toggleMode">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+                <input type="checkbox" class="input" id="toggleMode">
+                <span class="slider"></span>
+              </label>
+          
+              <div id="traduz">
+                <a target="blank" class="rodape-link" id="idioma">
+                    <ul class="icone">
+                        <li class="icon idioma">
+                            <span><i class="fa-solid fa-language"></i></span>
+                        </li>
+                    </ul>
+                </a>
+                <div class="dropdown">
+                    <table class="idioma-table">
+                        <div class="port-nav">
+                        <tr>
+                            <td><a href="#" onclick="mudarIdioma('pt')">Português 🇧🇷</a></td>
+                        </div>
+                        </tr>
+                        <div class="en-nav">
+                        <tr>
+                            <td><a href="#" onclick="mudarIdioma('en')">English 🇺🇸</a></td>
+                        </div>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </div>
+        
+
+    <div class="referencias">
+        <nav>
+            <div class="inic-nav">
+            <a href="index.html" >Página Inicial</a>
+        </div>
+            <!-- <a href="eu.html">Quem Sou Eu</a> -->
+            <div class="projet-nav">
+            <a href="projetos.html" class="pagina-atual">Projetos</a>
+        </div>
+            <div class="CV-nav">
+            <a href="CV.html">Curriculum Vitae</a>
+        </div>
+        </nav>
+    </div>
+    </div>
+
+    <br>
+<!-- 
+    <div class="resumo">
+        <h1>Projetos Realizados</h1>
+    </div> -->
+
+    <div class="texto"></div>
+
+    <br>
+
+    <div class="proj-text">
+        <img src="assets/slide2.webp">
+        <div class="proj-info">
+            <div class="proj-title">
+                <h2>Seção de Projetos:</h2>
+            </div>
+            <p>
+                Esta seção apresenta um catálogo dos projetos nos quais estive envolvido, cada um representando um marco em minha jornada profissional.
+                Cada projeto teve um proposito diferente, desde projetos de conclusão de curso a projetos premiados em competições <br>
+                Os 7 projetos a seguir representam a evolução que o estudo me proporcionou, cada imagem conta um pouco da historia do que foi o projeto 
+                , como surgiu sua ideia e como foi seu desenvolvimento.
+            </p>
+        </div>
+    </div>
+
+    <div class="proj">
+    
+    <div id="ambiente">
+        <div class="carta">
+            <img src="assets/ambiente.png">
+            <div class="carta__content">
+              <p class="carta__title">Ambiente Petropólis</p>
+              <p class="carta__description">O Ambiente Petropólis é um projeto idealizado para a competição "Petropólis Innovation", sendo vencendor da segunda colocação.
+                O Ambiente Petropólis é uma plataforma online que visa educar as pessoas sobre o meio ambiente, já que só assim conseguiremos fazer uma mudança real.
+                Além do "Petropólis Innovation" o projeto também participou de diversos eventos, sendo apresentado no Petropólis Business, 
+                nos 80 anos do SENAI Petropólis e na II Mostra SENAI de Projetos integradores 2023.</p>
+            </div>
+          </div>
+    </div>
+
+    <br>
+
+    <div id="biblioteca">
+        <div class="carta">
+            <img src="assets/emprestimo.png">
+            <div class="carta__content">
+                <p class="carta__title">Sistema de Gerenciamento de Empréstimos</p>
+                <p class="carta__description">
+                    No ano de 2024 todas as unidades FIRJAN SENAI do estado do Rio de Janeiro ficaram sem 
+                    rede de internet e sem acesso a sistemas oficiais do SENAI, entre um desses sistemas o Pergamun, que é utilizado pelas
+                    bibliotecas da rede SENAI e SESI para gerenciar os empréstimos de livros. Com esse problema criei um sistema simples
+                    que usa um servidor local do xampp e o phpMyAdmin para gerenciar esses empréstimos. O sistema conta com uma página
+                    de cadastro e uma página para listar os empréstimos. O sistema também conta com uma ferramenta para finalizar e estender
+                    os empréstimos, além disso empréstimos perto de acabar recebem uma coloração diferente para deixar claro para os 
+                    funcionários quais alunos devem ser cobrados. O sistema foi primariamente executado na unidade do SENAI Petrópolis
+                    mas está disponível e sendo utilizado por unidades em todo o estado.
+                    
+                    <br>
+                    <br>
+    
+                    Link do projeto no Github: 
+                    <a href="https://github.com/P-Cler/Biblioteca">https://github.com/P-Cler/Biblioteca</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <br>
+    
+    <div id="ensinAI">
+        <div class="carta">
+            <img src="assets/ensinai.png">
+            <div class="carta__content">
+              <p class="carta__title">EnsinAI</p>
+              <p class="carta__description">O Ensinai é um projeto idealizado para a competição "Grand Prix SENAI de Inovação", onde a empresa AWS apresentou um problema
+                refente a como integrar a Inteligencia Artificial na educação. Para isso desenvolvemos o EnsinAI, uma plataforma onde alunos e professores 
+                teriam acesso a uma IA Generativa integrada para retirar suas duvidas. Além disso usariamos de tecnologias de captação e transcrição de audio
+                para criar resumos por meio de IA permitindo o professor avançar no conteudo sem precisar se preoucupar com retomar assuntos já lecionados, já
+                que os alunos que não entenderam a materia de primeira teriam esse resumo para estudar. Vimos no EnsinAI uma aplicação necessaria na educação
+                já que retomando os assuntos, o planejamento de aula do professor é afetado, assim diminuindo o tempo que estudos futuros terão.</p>
+            </div>
+          </div>
+    </div>
+
+    <br>
+    
+    
+    <div id="renova">
+        <div class="carta">
+            <img src="assets/renova.jpeg">
+            <div class="carta__content">
+              <p class="carta__title">Projeto Renova</p>
+              <p class="carta__description">O Projeto Renova é um projeto participante do Desafio Inova SENAI. 
+                Esse projeto visava utilizar da agua da chuva para gerar energia eletrica, e tudo isso seria controlado, medido e gerenciado por meio do nosso aplicativo.
+                O projeto utilizava além de TI conhecimentos de mecanica e eletrica, para assim proporcionar a maior quantidade de energia para os possuidores do produto.
+                Além disso ele foi apresentado na primeira Mostra SENAI de projetos integradores 2023</p>
+            </div>
+          </div>
+</div>
+
+<br>
+
+<div id="quiz">
+    <div class="carta">
+        <img src="assets/quiz.png">
+        <div class="carta__content">
+          <p class="carta__title">Quiz 80 anos SENAI</p>
+          <p class="carta__description">Esse projeto consiste em um quiz de personalidade, 
+            nele as pessoas tem 14 respostas possiveis entre as categorias "Analitico, Criativo, Empatico e Organizado", onde cada um desses resultados entrega 
+            ao realizador 10 profissões do futuro ligadas a esse tipo de personalidade. Além disso como o resultado é feito comparando quais respostas foram escolhidas
+            ainda havia a possibilidade de ocorrer "empates" entre as personalidades, para isso respostas combinadas foram criadas, permitindo uma resposta certeira
+            para cada tipo de pessoa. Esse projeto foi um pedido da equipe do SENAI Petropólis para que o quiz ficasse disponivel durante os 80 Anos do SENAI Petropólis.
+            Toda a logica do quiz foi desenvolvida na lingaguem JavaScript, utilizando arrays, sweetAlert e swtich case, além de diversas funções para entregar o 
+            melhor resultado para quem realizou o quiz.</p>
+        </div>
+      </div>
+</div>
+
+<br>
+
+<div id="portfolio">
+    <div class="carta">
+        <img src="assets/portf.png">
+        <div class="carta__content">
+          <p class="carta__title">Portfolio</p>
+          <p class="carta__description">Esse próprio site é um projeto desenvolvido totalmente por mim com tecnologias WEB. 
+            Desde que comecei a estudar programação, compreendi a importância de ter um portfólio online.
+             Afinal, ele serve como uma porta de entrada para os empregadores visualizarem seu trabalho e, principalmente, para demonstrar sua capacidade. 
+             Ao construir um site com esse propósito, você está efetivamente exibindo suas habilidades.
+          </p>
+        </div>
+        </div>
+</div>
+
+<br>
+
+<div id="ajudaSENAI">
+    <div class="carta">
+        <img src="assets/ajudaSENAI.jpg">
+        <div class="carta__content">
+          <p class="carta__title">Ajuda SENAI</p>
+          <p class="carta__description">O Ajuda SENAI foi um projeto idealizado no começo do curso de TI,
+            onde o objetivo era criar um ambiente para os alunos da área de todos os SENAI do Brasil teriam um meio para se comunicar e trocar vivencias e experiencias.
+            Por ser nos primeiros meses de curso ele foi desenvolvido em low code, mas nesse prototipo já conseguimos passar a visão do que desejavamos entregar.
+            O projeto funcionava por meio de um site, onde por cada aba um pouco do objetivo do projeto era contado, como a galeria e blog, 
+            areas destinadas especificamente ao alunos, onde as conversas e fotos sobre o seu dia a dia e projetos poderiam ser compartilhadas com outras pessoas na mesma situação
+            Além disso com a participação de docentes teriamos um grande forum de duvidas, 
+            onde um projeto do  Rio Grande do Sul podia ter participação importante de alguem do Rio Grande do Norte.
+            Essa troca entre os estudantes é algo que visualizamos como essencial, já que esse trabalho em equipe é muito importante no mercado de trabalho, 
+            e trabalhar isso desde o ensino é primordial para um ambiente de trabalho mais adaptado e funcional.</p>
+        </div>
+      </div>
+</div>
+
+<br>
+
+<div id="solarmachine">
+    <div class="carta">
+        <img src="assets/solar machines.png">
+        <div class="carta__content">
+            <p class="carta__title">Solar Machines</p>
+            <p class="carta__description">Esse foi o primeiro projeto que eu realizei no SENAI, ele foi o projeto integrador final do meu curso de Manutenção Eletromecanica.  
+            Nele idealizamos uma ideia de uma placa solar com sensor de luminosidade e um sistema de movimentação, 
+             para sempre ficar na direção do sol e recolher o maximo de energia possivel.
+            Nele a nossa empresa Solar Machines realizaria todo serviço de instalação e manutenção das placas, 
+            este projeto foi aprovado pela banca do SENAI e foi baseado no desafio de sustentabilidade e tecnologia presente na SAGA SENAI de Inovação.</p>
+         </div>
+        </div>
+</div>
+
+</div>
+
+<br>
+
+<footer id="rodapeambiente">
+    <div id="rodape_conteudo">
+        <div class="esquerda">
+        <div id="rodape_contatos">
+            <h2>Contato</h2>
+            
+
+            <div class="rodape_redessociais">
+                <div id="rodape_socialmedia">
+                    <a href="https://wa.me/5524998281120" target="blank" class="rodape-link" id="whats">
+                        <ul class="wrapper">
+                            <li class="icon Whatsapp">
+                               <span class="tooltip">Whatsapp</span>
+                               <span><i class="fa-brands fa-whatsapp"></i></span>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+                <div id="rodape_socialmedia">
+                    <a href="mailto:pedroh.cler@gmail.com?subject&body=" target="blank" class="rodape-link" id="gmail">
+                        <ul class="wrapper">
+                            <li class="icon gmail">
+                               <span class="tooltip">Gmail</span>
+                               <span><i class="fa-solid fa-envelope"></i></span>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+                <div id="rodape_socialmedia">
+                    <a href="https://www.instagram.com/pedrosilvacler/" target="blank" class="rodape-link"
+                        id="instagram">
+                        <ul class="wrapper">
+                        <li class="icon instagram">
+                           <span class="tooltip">Instagram</span>
+                           <span><i class="fab fa-instagram"></i></span>
+                        </li>
+                    </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+        <div class="centro">
+        <div class="nome"> 
+            <div class="titulos">
+            <h1>Pedro Henrique da Silva Cler</h1></div>
+        </div>
+        <div class="centralizasocial">
+            <!-- <ul class="rodape-lista">
+                <li>
+                    <a href="edambiental.php" class="rodape-link">Educação</a>
+                </li>
+                <li>
+                    <a href="aventuraverde.php" class="rodape-link">Aventura Verde</a>
+                </li>
+                <li>
+                    <a href="ong.php" class="rodape-link">ONG</a>
+                </li>
+            </ul> -->
+    </div>
+    </div>
+
+    <div class="direita">
+    <div id="rodape_contatosdireita">
+        <div class="centralizado">
+        <h2>Portfolio</h2>
+
+        <div id="rodape_redessociais_direita">
+
+            <div id="rodape_socialmedia">
+                <a href="https://github.com/P-Cler" target="blank" class="rodape-link" id="github">
+                    <ul class="wrapper">
+                        <li class="icon Github">
+                           <span class="tooltip">Github</span>
+                           <span><i class="fa-brands fa-github"></i></span>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div id="rodape_socialmedia">
+                <a href="https://lattes.cnpq.br/4163337629942272" target="blank" class="rodape-link" id="lattes">
+                    <ul class="wrapper">
+                        <li class="icon Lattes">
+                           <span class="tooltip">Lattes</span>
+                           <span>
+                            <i class="fa-regular fa-file"></i>
+                           </span>
+                        </li>
+                    </ul>
+                </a>
+            </div>   
+                <div id="rodape_socialmedia">
+                    <a href="https://www.linkedin.com/in/p-cler-4a29762a3/" target="blank" class="rodape-link" id="facebook">
+                        <ul class="wrapper">
+                            <li class="icon Linkedin">
+                               <span class="tooltip">Linkedin</span>
+                               <span><i class="fa-brands fa-linkedin"></i></span>
+                            </li>
+                        </ul>
+                    </a>
+                </div>                 
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+</footer>
+
+<script src="scripts/proj.js"></script>
+
+</body>
+</html>

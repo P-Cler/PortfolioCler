@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Sou Eu</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.png">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" type="text/css" href="styles/CV.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        rel="stylesheet"
+        type='text/css'>
+</head>
+<body>
+
+    <div class="corpo">
+        <div class="cabecalho">
+            <div class="C-Container">
+            <label class="switch" for="toggleMode">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+                <input type="checkbox" class="input" id="toggleMode">
+                <span class="slider"></span>
+              </label>
+
+              <div id="traduz">
+                <a target="blank" class="rodape-link" id="idioma">
+                    <ul class="icone">
+                        <li class="icon idioma">
+                            <span><i class="fa-solid fa-language"></i></span>
+                        </li>
+                    </ul>
+                </a>
+                <div class="dropdown">
+                    <table class="idioma-table">
+                        <div class="port-nav">
+                        <tr>
+                            <td><a href="#" onclick="mudarIdioma('pt')">Português 🇧🇷</a></td>
+                        </div>
+                        </tr>
+                        <div class="en-nav">
+                        <tr>
+                            <td><a href="#" onclick="mudarIdioma('en')">English 🇺🇸</a></td>
+                        </div>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+            
+    
+        <div class="referencias">
+            <nav>
+                <div class="inic-nav">
+                <a href="index.html">Página Inicial</a>
+            </div>
+                <!-- <a href="eu.html">Quem Sou Eu</a> -->
+                <div class="projet-nav">
+                <a href="projetos.html">Projetos</a>
+            </div>
+                <div class="CV-nav">
+                <a href="CV.html" class="pagina-atual">Curriculum Vitae</a>
+            </div>
+            </nav>
+        </div>
+        </div>
+
+        <div class="texto"></div>
+
+
+        <div class="resumo">
+            
+            <div class="nome"> 
+                <h1>Pedro Henrique da Silva Cler</h1>
+            </div>
+
+        <div class="linha0">
+            <div class="linha"></div>
+        </div>
+
+        <div class="info">
+            <div class="ende">
+                <i>Endereço: Petropólis - RJ</i><br>
+            </div> 
+            <div class="phone">
+                <i>Celular: (24) 998281120</i><br>
+            </div> 
+                <i>Email: pedroh.cler@gmail.com</i><br>
+                <div class="age">
+                <i>Idade: 17 Anos</i>
+            </div>
+        </div>
+
+        <div class="linha0">
+            <div class="linha"></div>
+        </div>
+
+        <div class="titulo">
+            <div class="objetitle">
+                <h3>Objetivo</h3>
+            </div>
+        </div>
+
+        <div class="objetivo">
+            <div class="objeWEB">
+            <a>Desenvolvedor WEB</a>
+        </div>
+        </div>
+
+        <div class="linha0">
+            <div class="linha"></div>
+        </div>
+
+        <div class="titulo">
+            <div class="formATitle">
+            <h3>Formação Acadêmica</h3>
+        </div>
+        </div>
+
+        <div class="objetivo">
+            <span class="data"><a1>2022-Cursando</a1></span> <span class="grau"><a1>Ensino Médio</a1> </span> <br>
+            <span class="local"> Municipal Prefeito Cordolino Ambrósio – LMPCA</span>
+        </div>
+
+        <div class="linha02">
+            <div class="linha"></div>
+        </div>
+
+        <div class="titulo">
+            <div class="formCTitle">
+            <h3>Formação Complementar</h3>
+        </div>
+        </div>
+
+        <div class="objetivo">
+            <span class="data"><a2>2024-Cursando</a2></span></span> <span class="grau"><a2>Introduction to Cloud.</a2></span> <br>
+             <span class="local">AWS Academy</span>
+         </div>
+
+        <div class="objetivo">
+           <span class="data"><a2>2023-Cursando</a2></span></span> <span class="grau"><a2>Técnico em Informática (Tecnico).</a2></span> <br>
+            <span class="local"> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+        
+        <div class="objetivo">
+            <span class="data">2022-2022</span> <span class="grau-A"><a3>Programação com Arduino em FABLAB (Aprendizagem).</a3></span> <br>
+            <span class="local"> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+        <div class="objetivo">
+            <span class="data">2021-2022</span> <span class="grau-A"><a4>Manutenção Eletromecânica (Aprendizagem pela empresa Origem Ferramentaria LTDA).</a4></span> <br>
+            <span class="local"> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+        <div class="objetivo">
+            <span class="data">2016-2019</span> <span class="grau"><a5>Inglês</a5></span> <br>
+            <span class="local"> Progresso, Petropólis</span>
+        </div>
+
+        <div class="objetivo">
+            <span class="data">2016-2019</span> <span class="grau"><a6>Infórmatica</a6></span> <br>
+            <span class="local"> Progresso, Petropólis</span>
+        </div>
+
+        <div class="linha01">
+            <div class="linha"></div>
+        </div>
+
+        <div class="titulo">
+            <div class="atvCTitle">
+            <h3>Atividades Complementares</h3>
+        </div>
+        </div>
+
+        <div class="objetivo">
+            <span class="grau"><a13>Desafio Inova SENAI 2024. Participação: Competidor</a13></span> <br>
+            <span> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a7>II Mostra SENAI de Projetos integradores 2023. Apresentação de Trabalho</a7></span> <br>
+             Serviço Nacional de Aprendizagem Industrial -SENAI
+        </div>
+
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a8>Grand Prix Senai de Inovação. Participação: Competidor</a8></span> <br>
+            <span> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a9>Petropólis Business 2023. Apresentação de Trabalho</a9></span> <br>
+            <span>Prefeitura de Petropólis</span>
+        </div>
+
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a10> Aniversário 80 Anos SENAI Petropólis.</a10></span> <br>
+            <span> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a11>Petropólis Innovation. Participação: Competidor - 2° colocação</a11></span> <br>
+            <span> JA Rio de Janeiro e SOS Serra</span>
+        </div>
+
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a12>I Mostra SENAI de Projetos integradores 2023. Apresentação de Trabalho</a12></span> <br>
+            <span> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+       
+        <br>
+
+        <div class="objetivo">
+            <span class="grau"><a13>Desafio Inova SENAI 2023. Participação: Competidor</a13></span> <br>
+            <span> Serviço Nacional de Aprendizagem Industrial -SENAI</span>
+        </div>
+
+        <div class="linha0">
+            <div class="linha"></div>
+        </div>
+
+        <div class="titulo">
+            <div class="expTitle">
+                <h3>Experiência Profissional</h3>
+            </div>
+        </div>
+
+        <div class="objetivo">
+            <span class="data">2021-2022</span> <span class="grau">Origem Ferramentaria LTDA</span> <br>
+            <span class="local"><a1>Jovem Aprendiz</a1></span>
+        </div>
+
+        </div>
+
+        <footer id="rodapeambiente">
+            <div id="rodape_conteudo">
+                <div class="esquerda">
+                <div id="rodape_contatos">
+                    <h2>Contato</h2>
+                    
+    
+                    <div class="rodape_redessociais">
+                        <div id="rodape_socialmedia">
+                            <a href="https://wa.me/5524998281120" target="blank" class="rodape-link" id="whats">
+                                <ul class="wrapper">
+                                    <li class="icon Whatsapp">
+                                       <span class="tooltip">Whatsapp</span>
+                                       <span><i class="fa-brands fa-whatsapp"></i></span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div id="rodape_socialmedia">
+                            <a href="mailto:pedroh.cler@gmail.com?subject&body=" target="blank" class="rodape-link" id="gmail">
+                                <ul class="wrapper">
+                                    <li class="icon gmail">
+                                       <span class="tooltip">Gmail</span>
+                                       <span><i class="fa-solid fa-envelope"></i></span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div id="rodape_socialmedia">
+                            <a href="https://www.instagram.com/pedrosilvacler/" target="blank" class="rodape-link"
+                                id="instagram">
+                                <ul class="wrapper">
+                                <li class="icon instagram">
+                                   <span class="tooltip">Instagram</span>
+                                   <span><i class="fab fa-instagram"></i></span>
+                                </li>
+                            </ul>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+                
+                <div class="centro">
+                <div class="nome"> 
+                    <div class="titulos">
+                    <h1>Pedro Henrique da Silva Cler</h1></div>
+                </div>
+                <div class="centralizasocial">
+                    <!-- <ul class="rodape-lista">
+                        <li>
+                            <a href="edambiental.php" class="rodape-link">Educação</a>
+                        </li>
+                        <li>
+                            <a href="aventuraverde.php" class="rodape-link">Aventura Verde</a>
+                        </li>
+                        <li>
+                            <a href="ong.php" class="rodape-link">ONG</a>
+                        </li>
+                    </ul> -->
+            </div>
+            </div>
+        
+            <div class="direita">
+            <div id="rodape_contatosdireita">
+                <div class="centralizado">
+                <h2>Portfolio</h2>
+    
+                <div id="rodape_redessociais_direita">
+    
+                    <div id="rodape_socialmedia">
+                        <a href="https://github.com/P-Cler" target="blank" class="rodape-link" id="github">
+                            <ul class="wrapper">
+                                <li class="icon Github">
+                                   <span class="tooltip">Github</span>
+                                   <span><i class="fa-brands fa-github"></i></span>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div id="rodape_socialmedia">
+                        <a href="https://lattes.cnpq.br/4163337629942272" target="blank" class="rodape-link" id="lattes">
+                            <ul class="wrapper">
+                                <li class="icon Lattes">
+                                   <span class="tooltip">Lattes</span>
+                                   <span>
+                                    <i class="fa-regular fa-file"></i>
+                                   </span>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>   
+                        <div id="rodape_socialmedia">
+                            <a href="https://www.linkedin.com/in/p-cler-4a29762a3/" target="blank" class="rodape-link" id="facebook">
+                                <ul class="wrapper">
+                                    <li class="icon Linkedin">
+                                       <span class="tooltip">Linkedin</span>
+                                       <span><i class="fa-brands fa-linkedin"></i></span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </footer>
+
+</div>
+
+<script src="scripts/CV.js"></script>
+</body>
+</html>
