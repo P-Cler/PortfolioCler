@@ -17,17 +17,16 @@ conteudoPrincipal.style.paddingTop = alturaCabecalho + "px";
             prevScrollPos = currScrollPos;
         });
 
-        // Obtém o elemento do ícone de idioma e sua respectiva tabela de idiomas
-const idiomaIcon = document.getElementById('idioma');
+        const idiomaIcon = document.getElementById('idioma');
 const dropdown = document.querySelector('.dropdown');
 
-// Adiciona um evento de clique ao ícone de idioma para exibir/ocultar a tabela de idiomas
+
 idiomaIcon.addEventListener('click', function (e) {
     e.preventDefault();
     dropdown.classList.toggle('open');
 });
 
-// Fecha a tabela de idiomas se o usuário clicar fora dela
+
 document.addEventListener('click', function (e) {
     if (!idiomaIcon.contains(e.target)) {
         dropdown.classList.remove('open');
@@ -44,6 +43,7 @@ function mudarIdioma(idioma) {
             'navCV':'Curriculum Vitae',
             'titleProj': 'Seção de Projetos:',
             'infoProj': 'Esta seção apresenta um catálogo dos projetos nos quais estive envolvido, cada um representando um marco em minha jornada profissional. Cada projeto teve um proposito diferente, desde projetos de conclusão de curso a projetos premiados em competições. Os 7 projetos a seguir representam a evolução que o estudo me proporcionou, cada imagem conta um pouco da historia do que foi o projeto , como surgiu sua ideia e como foi seu desenvolvimento.',
+            'descSaep': 'No SENAI os alunos são submetidos a uma avaliação, tanto do seu conhecimento quanto da unidade que ele frequenta, O Sistema de Avaliação Profissional e Tecnológica (SAEP) é um método eficaz e reconhecido para avaliar o ensino profissionalizante do SENAI. O SAEPflix é uma plataforma virtual que busca armazenar de forma simples, catalogar intuitivamente e disponibilizar vídeos para os alunos da rede FIRJAN SENAI. A plataforma permitirá que todos os alunos da Rede FIRJAN SENAI acessem conteúdos sobre as competências de Tl do SAEP.',
             'descAmb':'O Ambiente Petropólis é um projeto idealizado para a competição "Petropólis Innovation", sendo vencendor da segunda colocação. O Ambiente Petropólis é uma plataforma online que visa educar as pessoas sobre o meio ambiente, já que só assim conseguiremos fazer uma mudança real. Além do "Petropólis Innovation" o projeto também participou de diversos eventos, sendo apresentado no Petropólis Business, nos 80 anos do SENAI Petropólis e na II Mostra SENAI de Projetos integradores 2023.',
             'descBib':'No ano de 2024, todas as unidades FIRJAN SENAI do estado do Rio de Janeiro ficaram sem rede de internet e sem acesso aos sistemas oficiais do SENAI, entre eles o Pergamun, que é utilizado pelas bibliotecas da rede SENAI e SESI para gerenciar os empréstimos de livros. Com esse problema, criei um sistema simples que usa um servidor local do XAMPP e o phpMyAdmin para gerenciar esses empréstimos. O sistema conta com uma página de cadastro e uma página para listar os empréstimos. O sistema também possui uma ferramenta para finalizar e estender os empréstimos. Além disso, empréstimos perto de expirar recebem uma coloração diferente para deixar claro para os funcionários quais alunos devem ser cobrados. O sistema foi primeiramente executado na unidade do SENAI Petrópolis, mas está disponível e sendo utilizado por unidades em todo o estado.',
             'descEns':'O Ensinai é um projeto idealizado para a competição "Grand Prix SENAI de Inovação", onde a empresa AWS apresentou um problema refente a como integrar a Inteligencia Artificial na educação. Para isso desenvolvemos o EnsinAI, uma plataforma onde alunos e professores teriam acesso a uma IA Generativa integrada para retirar suas duvidas. Além disso usariamos de tecnologias de captação e transcrição de audio para criar resumos por meio de IA permitindo o professor avançar no conteudo sem precisar se preoucupar com retomar assuntos já lecionados, já que os alunos que não entenderam a materia de primeira teriam esse resumo para estudar. Vimos no EnsinAI uma aplicação necessaria na educação já que retomando os assuntos, o planejamento de aula do professor é afetado, assim diminuindo o tempo que estudos futuros terão.',
@@ -60,6 +60,7 @@ function mudarIdioma(idioma) {
             'navCV':'Working Curriculum',
             'titleProj': 'Projects Section',
             'infoProj': 'This section showcases a catalog of the projects I\'ve been involved in, each representing a milestone in my professional journey. Each project served a different purpose, ranging from course completion projects to award-winning ventures in competitions. The following 7 projects represent the evolution that studying has provided me. Each image tells a bit of the story behind the project, how its idea emerged, and how its development unfolded.',
+            'descSaep': 'At SENAI, students are evaluated on both their knowledge and the unit they attend. The Professional and Technological Assessment System (SAEP) is an effective and recognized method for evaluating SENAIs vocational education.SAEPflix is a virtual platform designed to store videos in a simple way, intuitively catalog them, and make them available to students of the FIRJAN SENAI network. The platform will enable all students in the FIRJAN SENAI network to access content related to SAEPs IT competencies.',
             'descAmb':'The Ambiente Petropólis is a project conceived for the \'Petropólis Innovation\' competition, winning second place. Ambiente Petropólis is an online platform aimed at educating people about the environment, as only through this can we achieve real change. In addition to \'Petropólis Innovation,\' the project also participated in various events, being showcased at Petropólis Business, the 80th anniversary of SENAI Petropólis, and the second SENAI Integrative Projects Showcase in 2023.',
             'descBib': 'In 2024, all FIRJAN SENAI units in the state of Rio de Janeiro were without internet access and access to the official SENAI systems, among them Pergamun, which is used by the SENAI and SESI network libraries to manage book loans. With this problem, I created a simple system that uses a local XAMPP server and phpMyAdmin to manage these loans. The system has a registration page and a page to list the loans. The system also has a tool to finalize and extend the loans. Additionally, loans that are near expiration receive a different color to make it clear to the staff which students need to be notified. The system was initially implemented at the SENAI Petrópolis unit but is available and being used by units throughout the state.',
             'descEns':'EnsinAI is a project conceived for the \'SENAI Grand Prix of Innovation\' competition, where the company AWS presented an issue regarding integrating Artificial Intelligence into education. To address this, we developed EnsinAI, a platform where students and teachers would have access to an integrated Generative AI to address their queries. Additionally, we utilized audio capture and transcription technologies to create summaries through AI, allowing the teacher to progress through the content without worrying about revisiting previously taught subjects. This summary served as a study aid for students who didn\'t grasp the material initially. We saw EnsinAI as a necessary application in education since revisiting topics affects the teacher\'s lesson planning, consequently reducing the time for future studies.',
@@ -70,7 +71,7 @@ function mudarIdioma(idioma) {
             'descSM':'This was the first project I undertook at SENAI. It served as the final integrative project for my Electromechanical Maintenance course. Me conceptualized a solar panel idea with a light sensor and a movement system, ensuring it always faced the sun to maximize energy collection. Our company, Solar Machines, would handle all installation and maintenance services for these panels. The project was approved by the SENAI board and was based on the sustainability and technology challenge at the SENAI Innovation SAGA.',
             'roda':'Contact'
         }
-        // Adicione mais idiomas conforme necessário
+        
     };
 
 
@@ -79,6 +80,7 @@ function mudarIdioma(idioma) {
     document.querySelector('.CV-nav a').innerText = textos[idioma]['navCV'];
     document.querySelector('.proj-title h2').innerText = textos[idioma]['titleProj'];
     document.querySelector('.proj-info p').innerText = textos[idioma]['infoProj'];
+    document.querySelector('#saep p').innerText = textos[idioma]['descSaep'];
     document.querySelector('#ambiente p').innerText = textos[idioma]['descAmb'];
     document.querySelector('#biblioteca p').innerText = textos[idioma]['descBib'];
     document.querySelector('#ensinAI p').innerText = textos[idioma]['descEns'];
@@ -112,11 +114,11 @@ function setTheme(theme) {
     if (theme === 'dark') {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        toggleSwitch.checked = true; // Ativa o botão de alternância
+        toggleSwitch.checked = true; 
     } else {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        toggleSwitch.checked = false; // Desativa o botão de alternância
+        toggleSwitch.checked = false; 
     }
 }
 
@@ -129,31 +131,31 @@ function setTheme(theme) {
     if (theme === 'dark') {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        toggleSwitch.checked = true; // Ativa o botão de alternância
+        toggleSwitch.checked = true; 
     } else {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        toggleSwitch.checked = false; // Desativa o botão de alternância
+        toggleSwitch.checked = false; 
     }
 }
 
 toggleSwitch.addEventListener('change', function() {
     if (this.checked) {
-        // Se o checkbox estiver marcado (modo escuro)
+        
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        body.classList.add('dark-mode'); // Adicione uma classe para mudar o tema para escuro
+        body.classList.add('dark-mode'); 
         localStorage.setItem('mode', 'dark');
     } else {
-        // Se o checkbox não estiver marcado (modo claro)
+        
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        body.classList.remove('dark-mode'); // Remova a classe para mudar o tema para claro
+        body.classList.remove('dark-mode'); 
         localStorage.setItem('mode', 'light');
     }
 });
 
-// Verifica se 'dark-mode' está ativado ao carregar a página
+
 const userMode = localStorage.getItem('mode');
 const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -167,11 +169,11 @@ if (userMode === 'dark') {
     body.classList.add('dark-mode');
 }
 
-// Função para alternar e salvar a preferência do usuário
+
 function toggleDarkMode() {
     body.classList.toggle('dark-mode');
 
-    // Salva a preferência do usuário
+    
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('mode', 'dark');
     } else {
@@ -179,7 +181,7 @@ function toggleDarkMode() {
     }
 }
 
-// Verifica se o sistema operacional tem o tema escuro configurado
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark-mode');
 } else {
@@ -196,11 +198,11 @@ if (userMode === 'dark') {
     body.classList.add('dark-mode');
 }
 
-// Função para alternar e salvar a preferência do usuário
+
 function toggleDarkMode() {
     body.classList.toggle('dark-mode');
 
-    // Salva a preferência do usuário
+    
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('mode', 'dark');
     } else {
@@ -208,7 +210,7 @@ function toggleDarkMode() {
     }
 }
 
-// Verifica se o sistema operacional tem o tema escuro configurado
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark-mode');
 } else {

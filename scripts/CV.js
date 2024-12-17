@@ -21,33 +21,33 @@ conteudoPrincipal.style.paddingTop = alturaCabecalho + "px";
         const dropdown = document.querySelector('.dropdown');
         const idiomaSelecionado = localStorage.getItem('idiomaSelecionado');
         
-        // Adiciona um evento de clique ao ícone de idioma para exibir/ocultar a tabela de idiomas
+        
         idiomaIcon.addEventListener('click', function (e) {
             e.preventDefault();
             dropdown.classList.toggle('open');
         });
         
-        // Fecha a tabela de idiomas se o usuário clicar fora dela
+        
         document.addEventListener('click', function (e) {
             if (!idiomaIcon.contains(e.target)) {
                 dropdown.classList.remove('open');
             }
         });
 
-// Verifica se o usuário já tem um modo preferido
 
 
 
-// Verifica se 'dark-mode' está ativado ao carregar a página
+
+
 function setTheme(theme) {
     if (theme === 'dark') {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        toggleSwitch.checked = true; // Ativa o botão de alternância
+        toggleSwitch.checked = true; 
     } else {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        toggleSwitch.checked = false; // Desativa o botão de alternância
+        toggleSwitch.checked = false; 
     }
 }
 
@@ -60,31 +60,31 @@ function setTheme(theme) {
     if (theme === 'dark') {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        toggleSwitch.checked = true; // Ativa o botão de alternância
+        toggleSwitch.checked = true; 
     } else {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        toggleSwitch.checked = false; // Desativa o botão de alternância
+        toggleSwitch.checked = false; 
     }
 }
 
 toggleSwitch.addEventListener('change', function() {
     if (this.checked) {
-        // Se o checkbox estiver marcado (modo escuro)
+        
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        body.classList.add('dark-mode'); // Adicione uma classe para mudar o tema para escuro
+        body.classList.add('dark-mode'); 
         localStorage.setItem('mode', 'dark');
     } else {
-        // Se o checkbox não estiver marcado (modo claro)
+        
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        body.classList.remove('dark-mode'); // Remova a classe para mudar o tema para claro
+        body.classList.remove('dark-mode'); 
         localStorage.setItem('mode', 'light');
     }
 });
 
-// Verifica se 'dark-mode' está ativado ao carregar a página
+
 const userMode = localStorage.getItem('mode');
 const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -98,11 +98,11 @@ if (userMode === 'dark') {
     body.classList.add('dark-mode');
 }
 
-// Função para alternar e salvar a preferência do usuário
+
 function toggleDarkMode() {
     body.classList.toggle('dark-mode');
 
-    // Salva a preferência do usuário
+    
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('mode', 'dark');
     } else {
@@ -110,7 +110,7 @@ function toggleDarkMode() {
     }
 }
 
-// Verifica se o sistema operacional tem o tema escuro configurado
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark-mode');
 } else {
@@ -127,11 +127,11 @@ if (userMode === 'dark') {
     body.classList.add('dark-mode');
 }
 
-// Função para alternar e salvar a preferência do usuário
+
 function toggleDarkMode() {
     body.classList.toggle('dark-mode');
 
-    // Salva a preferência do usuário
+    
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('mode', 'dark');
     } else {
@@ -139,7 +139,7 @@ function toggleDarkMode() {
     }
 }
 
-// Verifica se o sistema operacional tem o tema escuro configurado
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark-mode');
 } else {
@@ -160,10 +160,10 @@ function mudarIdioma(idioma) {
             'titleobje': 'Objetivo',
             'WEBobj': 'Desenvolvedor WEB',
             'TitleformA': 'Formação Acadêmica',
-            'a1data': '2022-Cursando',
+            'a1data': '2022-2024',
             'a1grau':'Ensino Médio',
             'TitleformC': 'Formação Complementar',
-            'a2data': '2023-Cursando',
+            'a2data': '2023-2024',
             'a2grau':'Técnico em Informática (Tecnico).',
             'a3grau':'Programação com Arduino em FABLAB (Aprendizagem).',
             'a4grau':'Manutenção Eletromecânica (Aprendizagem pela empresa Origem Ferramentaria LTDA).',
@@ -191,10 +191,10 @@ function mudarIdioma(idioma) {
             'titleobje': 'Objective',
             'WEBobj': 'WEB Developer',
             'TitleformA': 'Academic Education',
-            'a1data': '2022-Studying',
+            'a1data': '2022-2024',
             'a1grau':'High School',
             'TitleformC': 'Complementary Training',
-            'a2data': '2023-Studying',
+            'a2data': '2023-2024',
             'a2grau':'IT Technician (Technician).',
             'a3grau':'Programming with Arduino in FABLAB (Learning).',
             'a4grau':'Electromechanical Maintenance (Learning by the company Origem Ferramentaria LTDA).',

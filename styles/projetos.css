@@ -27,7 +27,6 @@ body {
   align-items: center;
 }
 
-/* Ajuste o posicionamento do ícone de idioma */
 #traduz {
     display: flex;
     align-items: center;
@@ -294,18 +293,18 @@ nav .pagina-atual {
 
 .proj-text {
     display: flex;
-    align-items: center; /* Para alinhar verticalmente os itens */
+    align-items: center; 
     margin-bottom: 40px;
 }
 
 .proj-text img {
     width: 60%;
     height: auto;
-    margin-right: 20px; /* Adicione um espaçamento à direita da imagem */
+    margin-right: 20px; 
 }
 
 .proj-info {
-    flex-grow: 1; /* Para ocupar todo o espaço restante disponível na linha */
+    flex-grow: 1; 
 }
 
 .proj-title {
@@ -330,7 +329,7 @@ nav .pagina-atual {
     perspective: 1000px;
     box-shadow: 0 0 0 5px #ffffff80;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    width: 100%; /* Ajuste a largura da carta para 100% da largura do contêiner pai */
+    width: 100%; 
     height: auto;
     margin-bottom: 30px;
   }
@@ -392,22 +391,22 @@ nav .pagina-atual {
   
   .proj {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-wrap: wrap; /* Garante que as cartas sejam organizadas em várias linhas se necessário */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
   }
 
   .proj-text {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+    flex-wrap: wrap; 
     align-items: center;
     margin-bottom: 20px;
 }
 
 .proj-text img {
-    width: 100%; /* Ajuste a largura da imagem para 100% da largura do contêiner pai */
+    width: 100%; 
     height: auto;
-    margin-bottom: 20px; /* Adicione um espaçamento abaixo da imagem */
+    margin-bottom: 20px; 
 }
 
 .proj-info {
@@ -553,6 +552,24 @@ nav .pagina-atual {
   
   .rodape-link {
     text-decoration: none;
+    color: white
+  }
+
+  .link-proj {
+    text-decoration: none;
+    color: black
+  }
+
+  .link-proj:hover {
+    color: rgb(0, 119, 255)
+  }
+
+  .dark-mode .link-proj{
+    color:white
+  }
+
+  .dark-mode .link-proj:hover {
+    color: rgb(0, 119, 255)
   }
   
   .nome{
@@ -692,18 +709,17 @@ nav .pagina-atual {
 
   @media screen and (max-width: 767px) {
     .cabecalho {
-      flex-direction: column; /* Alinhar os elementos verticalmente */
+      flex-direction: column; 
       align-items: center;
       overflow: hidden;
     }
   
     .referencias nav {
-      margin: 10px; /* Adicionar um espaço entre os itens */
+      margin: 10px; 
     }
   }
 
   @media (min-width: 768px) {
-    /* Ajustes para telas maiores (768 pixels ou mais) */
     .proj-text {
         margin-bottom: 40px;
     }
@@ -922,25 +938,25 @@ nav .pagina-atual {
   }
 
   .dark-mode .carta {
-    background-color: #333; /* Fundo escuro */
-    color: #fff; /* Texto claro */
-    box-shadow: 0 0 0 5px #00000080; /* Sombra mais escura */
+    background-color: #333;  
+    color: #fff; 
+    box-shadow: 0 0 0 5px #00000080; 
   }
   
   .dark-mode .carta:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais escura no hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
   
   .dark-mode .carta__content {
-    background-color: #333; /* Fundo escuro */
+    background-color: #333; 
   }
   
   .dark-mode .carta__title {
-    color: #fff; /* Texto do título claro */
+    color: #fff; 
   }
   
   .dark-mode .carta__description {
-    color: #ccc; /* Texto da descrição mais claro */
+    color: #ccc; 
   }
 
   .dark-mode #rodape_conteudo {

@@ -28,7 +28,7 @@ body {
   align-items: center;
 }
 
-/* Ajuste o posicionamento do ícone de idioma */
+
 #traduz {
     display: flex;
     align-items: center;
@@ -158,7 +158,7 @@ body {
     height: 24px;
   }
   
-  /* .switch:hover */.sun svg {
+ .sun svg {
     animation: rotate 15s linear infinite;
   }
   
@@ -173,7 +173,7 @@ body {
     }
   }
   
-  /* .switch:hover */.moon svg {
+ .moon svg {
     animation: tilt 5s linear infinite;
   }
   
@@ -373,14 +373,14 @@ nav .pagina-atual {
 }
 
 .grau-A {
-    max-width: 70%; /* Define uma largura máxima para a div "grau" */
-    display: inline-block; /* Para que o texto abaixo comece na linha seguinte */
-    vertical-align: top; /* Alinha a div "grau-A" ao topo */
+    max-width: 70%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 
 
-/*footer */
+
 
 .wrapper {
     display: inline-flex;
@@ -582,7 +582,7 @@ nav .pagina-atual {
     text-decoration: none;
   }
   
-  /* Cores */
+ 
   
   .instagram, 
   #instagram{
@@ -643,23 +643,23 @@ nav .pagina-atual {
     background-color: black;
   }
   
-  /* Cores */
+ 
   
   .background {
     display: none;
   }
 
-  /* Responsividade */
+ 
 
   @media screen and (max-width: 767px) {
     .cabecalho {
-      flex-direction: column; /* Alinhar os elementos verticalmente */
+      flex-direction: column;
       align-items: center;
       overflow: hidden;
     }
   
     .referencias nav {
-      margin: 10px; /* Adicionar um espaço entre os itens */
+      margin: 10px;
     }
   }
 
@@ -669,20 +669,20 @@ nav .pagina-atual {
     
   
     .nome {
-      text-align: center; /* Centralizando o texto do cabeçalho */
+      text-align: center;
     }
   
     .linha,
     .linha0 {
-      width: 90%; /* Ajustando a largura das linhas */
+      width: 90%;
     }
   }
   
-  /* Para telas entre 768px e 1023px */
+ 
 
 
 @media screen and (max-width: 970px) {
-    /* Ajustes para telas menores */
+   
     
 
     .nome,
@@ -704,16 +704,16 @@ nav .pagina-atual {
     }
 
     .data {
-        width: auto; /* Definindo a largura de volta para automática */
-        display: block; /* Alterando o display para empilhar os elementos */
-        margin-bottom: 10px; /* Adicionando uma margem inferior para separar os elementos */
+        width: auto;
+        display: block;
+        margin-bottom: 10px;
       }
     
       .local {
-        display: block; /* Alterando o display para empilhar os elementos */
-        width: auto; /* Definindo a largura de volta para automática */
-        margin-top: 0; /* Remover a margem superior que pode estar causando o deslocamento */
-        margin-left: 0; /* Remover a margem esquerda definida anteriormente */
+        display: block;
+        width: auto;
+        margin-top: 0;
+        margin-left: 0;
       }
 
     .local {
@@ -730,8 +730,8 @@ nav .pagina-atual {
     }
     .grau-A{
         max-width: 100%;
-        display: inline-block; /* Para que o texto abaixo comece na linha seguinte */
-        vertical-align: top; /* Alinha a div "grau-A" ao topo */
+        display: inline-block;
+        vertical-align: top;
     }
 
     .cabecalho {
@@ -789,10 +789,10 @@ nav .pagina-atual {
   
   }
   
-  /* Responsividade */
+ 
 
 
-    /* Dark-Mode */
+   
 
   .dark-mode {
     background-color: #121212;
@@ -821,4 +821,4 @@ nav .pagina-atual {
   color: rgb(0, 119, 255);
 }
 
-  /* Dark-Mode */
+ 

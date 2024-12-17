@@ -17,18 +17,18 @@ conteudoPrincipal.style.paddingTop = alturaCabecalho + "px";
             prevScrollPos = currScrollPos;
         });
 
-        // Obtém o elemento do ícone de idioma e sua respectiva tabela de idiomas
+        
 const idiomaIcon = document.getElementById('idioma');
 const dropdown = document.querySelector('.dropdown');
 const idiomaSelecionado = localStorage.getItem('idiomaSelecionado');
 
-// Adiciona um evento de clique ao ícone de idioma para exibir/ocultar a tabela de idiomas
+
 idiomaIcon.addEventListener('click', function (e) {
     e.preventDefault();
     dropdown.classList.toggle('open');
 });
 
-// Fecha a tabela de idiomas se o usuário clicar fora dela
+
 document.addEventListener('click', function (e) {
     if (!idiomaIcon.contains(e.target)) {
         dropdown.classList.remove('open');
@@ -82,15 +82,15 @@ const hasActiveTab = () => {
 };
 
 const showTabContent = (tabId) => {
-  // Verifica se há algum tab ativo
+  
   const hasActive = hasActiveTab();
 
   allTabs.forEach((tab) => {
     if (hasActive) {
-      // Se houver algum tab ativo, exibe o conteúdo desse tab
+      
       tab.style.display = tab.id === tabId ? "block" : "none";
     } else {
-      // Se nenhum tab estiver ativo, exibe o conteúdo da #tab1-content
+      
       tab.style.display = tab.id === "tab1-content" ? "block" : "none";
     }
   });
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Exibe o conteúdo inicial
+  
   showTabContent("tab1-content");
 });
 
@@ -123,7 +123,7 @@ const handleTabClick = (event) => {
     if (link.id === linkId) {
       link.classList.add("active");
 
-      // Adiciona a borda apenas se a tab estiver ativa
+      
       if (window.innerWidth >= 768) {
         link.style.borderRight = "3px solid var(--primary)";
       } else {
@@ -131,7 +131,7 @@ const handleTabClick = (event) => {
       }
     } else {
       link.classList.remove("active");
-      // Remove a borda se a tab não estiver ativa
+      
       link.style.borderRight = "";
       link.style.borderBottom = "";
     }
@@ -235,7 +235,7 @@ function mudarIdioma(idioma) {
 
 
 
-// Verifica se o usuário já tem um modo preferido
+
 
 const toggleSwitch = document.getElementById('toggleMode');
 const sunIcon = document.querySelector('.sun');
@@ -246,31 +246,31 @@ function setTheme(theme) {
     if (theme === 'dark') {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        toggleSwitch.checked = true; // Ativa o botão de alternância
+        toggleSwitch.checked = true; 
     } else {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        toggleSwitch.checked = false; // Desativa o botão de alternância
+        toggleSwitch.checked = false; 
     }
 }
 
 toggleSwitch.addEventListener('change', function() {
     if (this.checked) {
-        // Se o checkbox estiver marcado (modo escuro)
+        
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
-        body.classList.add('dark-mode'); // Adicione uma classe para mudar o tema para escuro
+        body.classList.add('dark-mode'); 
         localStorage.setItem('mode', 'dark');
     } else {
-        // Se o checkbox não estiver marcado (modo claro)
+        
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline-block';
-        body.classList.remove('dark-mode'); // Remova a classe para mudar o tema para claro
+        body.classList.remove('dark-mode'); 
         localStorage.setItem('mode', 'light');
     }
 });
 
-// Verifica se 'dark-mode' está ativado ao carregar a página
+
 const userMode = localStorage.getItem('mode');
 const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -284,11 +284,11 @@ if (userMode === 'dark') {
     body.classList.add('dark-mode');
 }
 
-// Função para alternar e salvar a preferência do usuário
+
 function toggleDarkMode() {
     body.classList.toggle('dark-mode');
 
-    // Salva a preferência do usuário
+    
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('mode', 'dark');
     } else {
@@ -296,7 +296,7 @@ function toggleDarkMode() {
     }
 }
 
-// Verifica se o sistema operacional tem o tema escuro configurado
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark-mode');
 } else {
