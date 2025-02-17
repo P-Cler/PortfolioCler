@@ -164,7 +164,7 @@ function mudarIdioma(idioma) {
             'a1grau':'Ensino Médio',
             'TitleformC': 'Formação Complementar',
             'a2data': '2023-2024',
-            'a2grau':'Técnico em Informática (Tecnico).',
+            'a2grau':'Técnico em Informática (Técnico).',
             'a3grau':'Programação com Arduino em FABLAB (Aprendizagem).',
             'a4grau':'Manutenção Eletromecânica (Aprendizagem pela empresa Origem Ferramentaria LTDA).',
             'a5grau':'Inglês',
@@ -177,8 +177,10 @@ function mudarIdioma(idioma) {
             'a11grau':'Petrópolis Innovation. Participação: Competidor - 2° colocação',
             'a12grau':'I Mostra SENAI de Projetos integradores 2023. Apresentação de Trabalho',
             'a13grau':'Desafio Inova SENAI. Participação: Competidor',
-            'Titleexp': 'PExperiência Profissional',
+            'a14grau':'Operador de Suporte Técnico em TI (Aprendizagem pela empresa Orange Business Services Brasil LTDA).',
+            'Titleexp': 'Experiência Profissional',
             'a1local': 'Jovem Aprendiz',
+            'a2local': 'Aprendiz Operador de Suporte Técnico em TI - Jovem Aprendiz',
         },
         'en': {
             'navinc':'Home page',
@@ -208,8 +210,10 @@ function mudarIdioma(idioma) {
             'a11grau':'Petropolis Innovation. Participation: Competitor - 2nd place',
             'a12grau':'I SENAI Integrative Projects Exhibition 2023. Presentation of Work',
             'a13grau':'Desafio Inova SENAI. Participation: Competitor',
+            'a14grau':'Technical Support Operator in IT (Learning by the company Orange Business Services Brasil LTDA)',
             'Titleexp': 'Professional Experience',
             'a1local': 'Apprentice',
+            'a2local': 'Technical Support Operator in IT (Apprenticeship)',
         }
     };
 
@@ -230,8 +234,8 @@ function mudarIdioma(idioma) {
     document.querySelector('.formCTitle h3').innerText = textos[idioma]['TitleformC'];
     document.querySelector('.data a2').innerText = textos[idioma]['a2data'];
     document.querySelector('.grau a2').innerText = textos[idioma]['a2grau'];
-    document.querySelector('.grau-A a3').innerText = textos[idioma]['a3grau'];
-    document.querySelector('.grau-A a4').innerText = textos[idioma]['a4grau'];
+    document.querySelector('.grau a3').innerText = textos[idioma]['a3grau'];
+    document.querySelector('.grau a4').innerText = textos[idioma]['a4grau'];
     document.querySelector('.grau a5').innerText = textos[idioma]['a5grau'];
     document.querySelector('.grau a6').innerText = textos[idioma]['a6grau'];
     document.querySelector('.atvCTitle h3').innerText = textos[idioma]['TitleatvC'];
@@ -242,8 +246,10 @@ function mudarIdioma(idioma) {
     document.querySelector('.grau a11').innerText = textos[idioma]['a11grau'];
     document.querySelector('.grau a12').innerText = textos[idioma]['a12grau'];
     document.querySelector('.grau a13').innerText = textos[idioma]['a13grau'];
+    document.querySelector('.grau a14').innerText = textos[idioma]['a14grau'];
     document.querySelector('.expTitle h3').innerText = textos[idioma]['Titleexp'];
     document.querySelector('.local a1').innerText = textos[idioma]['a1local'];
+    document.querySelector('.local a2').innerText = textos[idioma]['a2local'];
 
     localStorage.setItem('idiomaSelecionado', idioma);
 }
