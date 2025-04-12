@@ -10,7 +10,6 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  place-items: center;
   overflow-x: hidden;
 }
 
@@ -230,13 +229,13 @@ body {
 
 
 .referencias {
-    display: flex;
-      justify-content: flex-end; 
-      align-items: center;
-      margin-right: 17px;
-    width: auto;
-    height: auto;
-    margin-left: 20px;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  margin-right: 17px;
+  width: auto;
+  height: auto;
+  margin-left: auto; 
 }
 
 .referencias nav {

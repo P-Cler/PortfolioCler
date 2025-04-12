@@ -14,7 +14,6 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  place-items: center;
   overflow-x: hidden;
 }
 
@@ -236,9 +235,9 @@ body {
 
 .referencias {
     display: flex;
-      justify-content: flex-end; 
-      align-items: center;
-      margin-right: 17px;
+    justify-content: flex-end; 
+    align-items: center;
+    margin-right: 17px;
     width: auto;
     height: auto;
     margin-left: 20px;
@@ -295,6 +294,7 @@ body {
 nav .pagina-atual {
     color: rgb(0, 119, 255) !important;
 }
+
 
 
 .botaoquemsomos button {
