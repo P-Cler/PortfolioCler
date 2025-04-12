@@ -234,21 +234,21 @@ body {
 
 
 .referencias {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center;
-    margin-right: 17px;
-    width: auto;
-    height: auto;
-    margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 17px;
 }
 
 .referencias nav {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -8px;
-    margin-left: 0;
-    margin-right: 0;
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+}
+
+.referencias nav > div {
+  display: flex;
+  align-items: center;
 }
 
 .referencias nav a {

@@ -218,9 +218,16 @@ function mudarIdioma(idioma) {
     document.querySelector('.texto h1').innerText = textos[idioma]['texth1'];
     document.querySelector('.texto p').innerText = textos[idioma]['textp1'];
     document.querySelector('.textbt span').innerText = textos[idioma]['textbt0'];
-    document.querySelector('.inic-nav a').innerText = textos[idioma]['navinc'];
-    document.querySelector('.projet-nav a').innerText = textos[idioma]['navProj'];
-    document.querySelector('.CV-nav a').innerText = textos[idioma]['navCV'];
+    document.querySelectorAll('.inic-nav a').forEach(a => {
+      a.innerText = textos[idioma]['navinc'];
+  });
+  document.querySelectorAll('.projet-nav a').forEach(a => {
+    a.innerText = textos[idioma]['navProj'];
+});
+
+document.querySelectorAll('.CV-nav a').forEach(a => {
+    a.innerText = textos[idioma]['navCV'];
+});
     document.querySelector('.ambieinfo a').innerText = textos[idioma]['infoamb'];
     document.querySelector('.Graninfo').innerText = textos[idioma]['infoEnsi'];
     document.querySelector('.Quizinfo').innerText = textos[idioma]['info80'];
